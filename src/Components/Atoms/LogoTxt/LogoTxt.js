@@ -12,9 +12,13 @@ const Txt = styled.h1`
   display: flex;
   align-items: center;
   padding-left: 65px;
+  @media (max-width: 768px) {
+    display: none;
+    padding: 0;
+  }
 `
 const LogoTxt = () => (
-  <Txt>SHAPES</Txt>
+  <Txt>SHAPE</Txt>
 )
 
 export default LogoTxt

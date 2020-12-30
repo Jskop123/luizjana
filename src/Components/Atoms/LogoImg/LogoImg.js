@@ -14,6 +14,9 @@ const Img = styled.img`
     transform: rotate(360deg);
     cursor: pointer;
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 const FooterImg = styled(Img)`
   position: relative;

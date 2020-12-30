@@ -11,6 +11,10 @@ const Ul = styled.ul`
   margin: 0;
   align-items: center;
   font-weight: 600;
+  @media (max-width: 768px) {
+    height: 75px;
+    width: 100vw;
+  }
 `
 const Li = styled.li`
   font-size: 1.8em;

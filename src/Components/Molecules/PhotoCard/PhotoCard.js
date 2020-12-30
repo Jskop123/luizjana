@@ -8,6 +8,12 @@ const Img = styled.img`
   width: 50vw;
   height: 90vh;
   box-shadow: 1px 1px 10px 1px #000;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 80vh;
+    display block;
+    margin: auto;
+  }
 `
 const Div = styled.div`
   padding: 80px 0 5%;

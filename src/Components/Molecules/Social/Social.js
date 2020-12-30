@@ -10,6 +10,9 @@ const Ul = styled.ul`
   width: 25%;
   margin: 0;
   height: 50px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 const Li = styled.li`
   font-size: 2em;

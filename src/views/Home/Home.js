@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import MainTemplate from '../../theme/MainTemplate'
 import getData from '../../tools/getData'
 
-const URL = `https://restapishapes.herokuapp.com/api/${'home'}`
+const URL = `http://shapesshop.pythonanywhere.com/api/${'home'}`
 
 const MainText = styled.h1`
   font-size: 25vh;
@@ -14,6 +14,13 @@ const MainText = styled.h1`
   color: #FFF250;
   opacity: .8;
   text-shadow: 5px 5px 2px rgba(150, 150, 150, 0.74);
+  @media (max-width: 768px) {
+    font-size: 20vh;
+    left: 0;
+    bottom: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
 `
 const Img = styled.img`
   object-fit: cover;
@@ -42,7 +49,7 @@ const Home = () => {
     ) : (
       <HomePage>
         <Img className={styled.image} src={(data) ? (data.image) : ('')} alt="background" />
-        <MainText>{(data) ? (data.title) : ('SHAPES')}</MainText>
+        <MainText>{(data) ? (data.title) : ('SHAPE')}</MainText>
       </HomePage>
     )}
   </MainTemplate>

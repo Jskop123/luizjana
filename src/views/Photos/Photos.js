@@ -4,7 +4,7 @@ import MainTemplate from '../../theme/MainTemplate'
 import PhotoCard from '../../Components/Molecules/PhotoCard/PhotoCard'
 import getData from '../../tools/getData'
 
-const URL = `https://restapishapes.herokuapp.com/api/${'photos'}`
+const URL = `http://shapesshop.pythonanywhere.com/api/${'photos'}`
 
 const Background = styled.div`
   background-color: #ccc;
@@ -12,6 +12,9 @@ const Background = styled.div`
   display: block;
   margin: auto;
   padding-bottom: 10%;
+  @media (max-width: 768px) {
+    width: 95vw;
+  }
 `
 const Photos = () => {
   const [data, setData] = useState([])

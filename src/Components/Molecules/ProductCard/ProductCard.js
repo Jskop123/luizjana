@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-
+import Button from '../../Atoms/Button/Button'
 
 const ProductTab = styled.div`
   background-color: #ccc;
@@ -35,34 +35,17 @@ const Buttons = styled.div`
   display: flex;
   justify-content: space-around;
 `
-const Button = styled.button`
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  padding: 10px 15px;
-  background-color: ${({ primary }) => primary ? "red" : "#FFF250"  };
-  color: ${({ primary }) => primary ? "#eee" : "000"  };
-  border: none;
-  font-size: 1.2em;
-  border-radius: 10px;
-  box-shadow: 0px 8px 2px 0px rgba(0,0,0,0.75);
-  transition: .3s;
-  &:hover {
-    cursor: pointer;
-    box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.75);
-    transform: translateY(4px);
-    opacity: .8;
-  }
-`
 
-const ProductCard = ({addToCart, openDetails, koszulka}) => (
+
+const ProductCard = ({openDetails, addToCart, id, title, description, price, image}) => (
   <ProductTab>
-    <Img src={koszulka} alt="koszulka"/>
+    <Img src={image} alt="koszulka"/>
     <ProductInfo>
-      <H1>Koszulka szpadel grzyb</H1>
-      <P>80.00 zł</P>
+      <H1>{title}</H1>
+      <P>{description}</P>
+      <P>{price} zł</P>
       <Buttons>
-        <Button onClick={openDetails}>Open</Button>
-        <Button primary onClick={addToCart}>AddToCart</Button>
+        <Button click={openDetails} id={id}>Open</Button>
       </Buttons>
     </ProductInfo>
   </ProductTab>

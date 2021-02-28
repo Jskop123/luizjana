@@ -31,7 +31,7 @@ const P = styled.p`
   margin: auto;
 `
 const Border = styled.div`
-  margin-top: 5%;
+  margin: 5% 0;
   border-top: 1px solid #ddd;
 `
 

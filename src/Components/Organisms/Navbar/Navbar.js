@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { LogoImg } from '../../Atoms/LogoImg/LogoImg';
 import LogoTxt from '../../Atoms/LogoTxt/LogoTxt';
-import Menu from '../../Molecules/Menu/Menu';
+import Menu from '../Menu/Menu';
 import Social from '../../Molecules/Social/Social';
 
 const Nav = styled.nav`
@@ -17,7 +17,6 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
 `
-
 const Navbar = () => (
   <Nav>
     <LogoImg />
@@ -26,5 +25,4 @@ const Navbar = () => (
     <Social />
   </Nav>
 )
-
 export default Navbar
